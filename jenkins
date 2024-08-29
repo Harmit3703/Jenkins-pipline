@@ -47,13 +47,13 @@ pipeline {
     }
     post{
         success {
-            emailext body: 'Jenkins exp6: success',
+            emailext body: 'The integration tests on staging have completed with success. Please check the attached logs for details.',
                 subject: 'Jenkins success',
                 attachLog: true,
                 to: 'harmitdalwadi@gmail.com'
         }
         failure {
-            emailext body: 'Jenkins exp6: failure',
+            emailext body: 'The integration tests on staging have completed with failure. Please check the attached logs for details.',
                 subject: 'Jenkins failure',
                 attachLog: true,
                 to: 'harmitdalwadi@gmail.com'
